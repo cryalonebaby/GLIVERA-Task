@@ -1,0 +1,23 @@
+@import './variables';
+
+.container {
+  // width: 100vw;
+  min-width: 500px + 71px * 2;
+  height: 100%;
+  display: flex;
+  // flex-wrap: wrap;
+  background-color: $background;
+  overflow-x: hidden;
+  &-menu {
+    position: absolute;
+    top: 1.6rem;
+    left: 1rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.main {
+  flex: 1;
+}

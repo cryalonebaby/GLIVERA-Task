@@ -1,0 +1,127 @@
+@import './variables';
+
+.navbar {
+  height: 100%;
+  position: fixed;
+  width: 19.125rem;
+  min-width: 19.125rem;
+  background: white;
+  box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
+  display: flex;
+  flex-direction: column;
+  // overflow-y: scroll;
+  z-index: 999;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  margin: 2.125rem 3.813rem 0 1.5rem;
+  &-text {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+  &-title {
+    display: inline-block;
+    font-size: 1.625rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    letter-spacing: 1%;
+  }
+  &-version {
+    align-self: flex-end;
+    color: $version;
+    font-size: 0.938rem;
+    font-weight: 500;
+    line-height: 0.813rem;
+    letter-spacing: -1%;
+    margin-left: 0.25rem;
+  }
+}
+
+.nav-body {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $linkPadding;
+  &-link {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.813rem 1.188rem 0.75rem 0.813rem;
+    border-radius: 8px;
+    &:hover {
+      cursor: pointer;
+    }
+    &-active {
+      color: white;
+      background: $violet;
+    }
+    &-title {
+      color: $linkGray;
+      font-weight: 500;
+      font-size: 0.875rem;
+      line-height: 1.313rem;
+      letter-spacing: -0.01em;
+      &-active {
+        color: white;
+      }
+    }
+  }
+}
+
+.arrow {
+  margin-left: auto;
+  &-active > path {
+    stroke: white;
+  }
+}
+
+.nav-profile {
+  display: flex;
+  align-items: center;
+  margin: auto 0 2.375rem 1.75rem;
+  &-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.75rem;
+    &-name {
+      font-weight: 500;
+      font-size: 0.875rem;
+      line-height: 1.313rem;
+      letter-spacing: 0.01em;
+    }
+    &-rank {
+      color: $rankGray;
+      font-weight: 400;
+      font-size: 0.75rem;
+      line-height: 1.125rem;
+      letter-spacing: 0.01em;
+    }
+  }
+}
+
+@media (max-width: 925px) {
+  .navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    display: none;
+    &-open {
+      display: flex;
+    }
+    &-close {
+      display: none;
+    }
+    // &-wrapper {
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   height: 100vh;
+    // }
+  }
+}
